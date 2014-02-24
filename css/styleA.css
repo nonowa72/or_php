@@ -1,0 +1,498 @@
+@charset "utf-8";
+
+html,div,body,input{
+	margin: 0;
+	padding: 0;
+	font-family:arial;
+}
+
+
+body{
+	background: url("../img/back.png") repeat-x #aaaaaf;
+	color:white;
+}
+
+#wrapper{
+	width:714px;
+	margin:0 auto;
+	text-align: center;
+	position: relative;
+}
+
+#logo:before{
+	content:"calendar.";
+	height:40px;
+	margin:0 auto;
+	font-size:30px;
+	color:#77777f;
+	position: absolute;
+	top:20px;
+	left:0;
+}
+
+
+
+.youbi{
+	float:left;
+	width:102px;
+	height:20px;
+	margin-top:15px;
+	text-align: center;
+	line-height:20px;
+	color:#666;
+	font-size:11px;
+}
+
+#content{
+	/*margin-top:10px;*/
+}
+
+#option1{
+	width:500px;
+	height:80px;
+	position: relative;
+	z-index:10;
+}
+#option2{
+	width:500px;
+	height:80px;
+	position: relative;
+	z-index:10;
+}
+
+#box{
+	top:-18px;
+	width:100%;
+	z-index:1;
+	padding-bottom:20px;
+	overflow: hidden;
+}
+
+#centerBox{
+	width:714px;
+	margin:0px auto;
+	float:left;
+	overflow: hidden;
+}
+
+.leftButton,.rightButton{
+	width:30px;
+	height:30px;
+}
+
+.leftButton a,.rightButton a{
+	display:block;
+	width:30px;
+	height:30px;
+}
+
+.leftButton{
+	position: absolute;
+	right:55px;top:25px;
+	background: url("../img/leftButton2.png");
+}
+.rightButton{
+	position:absolute;
+	right:15px;top:25px;
+	background: url("../img/rightButton2.png");
+}
+
+.null,.normal,.sat,.sun{
+	float:left;
+	width:100px;
+	height:100px;
+	text-align: center;
+	line-height:100px;
+	color:#666;
+	border:1px solid #aaa;
+	font-size:30px;
+}
+
+.schedule{
+	float:left;
+	line-height:20px;
+	width:15px;
+	font-size:15px;
+}
+
+
+.null{
+	color:#ccc;
+	background:#dddddf;
+}
+.normal{
+	background:#fefeff;
+}
+.sat{
+	background: #5d82ad;
+	color:white;
+}
+.sun{
+	background:#bd6052;
+	color:white;
+}
+
+.null a,.normal a,.sat a,.sun a{
+	color:#99999f;
+	text-decoration: none;
+	display: block;
+	width:85px;
+	height:100px;
+}
+
+.sat a,.sun a{
+	color:white;
+}
+
+.null a:hover,.normal a:hover,.sat a:hover,.sun a:hover{
+	background: #e3a600;
+	width:100px;
+	text-width:center;
+	color:#fff;
+}
+
+
+#infoBox{
+	width:100%;
+	overflow: hidden;
+	margin:20px 0 10px 0;
+}
+
+#year{
+	color:#fff;
+	position: absolute;
+	top:30px;
+	left:535px;
+}
+
+
+
+#scheduleMonth{
+    position:absolute;
+    text-align: left;
+    left:50%;
+    top:0px;
+    background: red;
+    height:50px;
+    text-align: left;
+    margin-left:-40px;
+}
+
+#date{
+	color:white;
+	position: absolute;
+	font-size:60px;
+	top:5px;
+	left:35px;
+}
+
+.month1,.month2,.month3,.month4,.month5,.month6,.month7,.month8,.month9,.month10,.month11,.month12,{
+	position: absolute;
+	top:0px;
+	left:0px;
+}
+.month1:before,.month2:before,.month3:before,.month4:before,.month5:before,.month6:before,.month7:before,.month8:before,.month9:before,.month10:before,.month11:before,.month12:before{
+	font-size:60px;
+	color:#fff;
+	position: absolute;
+	top:5px;
+	left:50%;
+	margin-left:-35px;
+	display: block;
+	height:20px;
+}
+
+.month1:before{
+	content:"01";
+}
+.month2:before{
+	content:"02";
+}
+.month3:before{
+	content:"03";
+}
+.month4:before{
+	content:"04";
+}
+.month5:before{
+	content:"05";
+}
+.month6:before{
+	content:"06";
+}
+.month7:before{
+	content:"07";
+}
+.month8:before{
+	content:"08";
+}
+.month9:before{
+	content:"09";
+}
+.month10:before{
+	content:"10";
+}
+.month11:before{
+	content:"11";
+}
+.month12:before{
+	content:"12";
+}
+
+
+/*スケジュール登録用*/
+
+#scheduleBox{
+	padding-top:90px;
+	text-align: left;
+}
+
+ul,#listBox li{
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	margin-bottom:1px;
+}
+
+#listBox li{
+	min-height:20px;
+	color:#ccc;
+	padding:0;
+	background: #fff;
+	margin-bottom:1px solid #aaa;
+	overflow: hidden;
+	position: relative;
+}
+
+#listBox span{
+	float: right;
+}
+
+#listBox a{
+	font-size:15px;
+	color:#eee;
+	text-decoration: none;
+	display: inline-block;
+	width:20px;
+	height:20px;
+	background: #a0a0a5;
+	text-align: center;
+	line-height: 20px;
+}
+
+#listBox input{
+	float:left;
+}
+
+#listBox input:first-child{
+	width:100px;
+}
+
+#listBox .todo{
+	float:left;
+	width:500px;
+	padding-left:0;
+}
+
+.task{
+    width:100%;
+    border:1px solid #555;
+    height:48px;
+    font-size:18px;
+    padding:5px;
+	line-height: 60px;
+}
+
+#taskForm{
+    width:100%;
+	position: relative;
+}
+
+#addButton{
+	padding: 0;
+	margin: 0;
+	width:100px;
+	height:60px;
+	line-height: 60px;
+	border:0px solid #999;
+	position: absolute;
+	right:0px;
+	top:0px;
+	font-size:20px;
+	color:#fff;
+	background: #555566;
+}
+
+#addButton:hover{
+	background: #77777f;
+	color:#fff;
+}
+
+textarea{
+	width:614px;
+}
+
+.title{
+	height:40px;
+	line-height: 40px;
+}
+
+#monthDisp{
+	position: absolute;
+	font-size:40px;
+	color:#a0a0a5;
+	bottom:0px;
+	right:0px;
+	z-index: -5;
+}
+
+#submitButton,#backButton{
+	background: #667;
+	width:200px;
+	padding:10px 0;
+	border:0px;
+	color:#eee;
+	margin:0 auto;
+}
+
+
+#submitButton:hover,#backButton:hover,#backButton2:hover{
+	background: #fff;
+	color:#55555f;
+}
+
+#submitButton{
+    background:#555566;
+	float: right;
+	margin-left:1px;
+}
+#backButton{
+	width:100px;
+	float: right;
+}
+
+#backButton2{
+	background: #667;
+	padding:10px 0;
+	border:0px;
+	color:#eee;
+	width:160px;
+	height:60px;
+	margin:0 auto;
+}
+
+#taskInfo{
+    top:105px;
+    margin:10px 0 0 10px;
+	height:50px;
+	color:#556;
+}
+
+#categories{
+	display: inline-block;
+	width:310px;
+}
+
+ul#categoryList{
+	position: absolute;
+	right:0px;
+	top:10px;
+}
+
+ul#categoryList li{
+	background: #eee;
+	float:left;
+	width:100px;
+	line-height: 30px;
+	height:30px;
+	color:gray;
+	text-align: center;
+	font-size:11px;
+	margin-left:1px;
+}
+
+ul#categoryList li a{
+	display: block;
+	width:100px;
+	height:30px;
+	color:white;
+	text-decoration: none;
+}
+
+ul#categoryList li.all a{
+	color:gray;
+}
+
+ul#categoryList li.worktask{
+    color:white;
+	background: #bd6052;
+}
+
+ul#categoryList li.meeting{
+    color:white;
+	background: #5d82ad;
+}
+
+ul#categoryList li.personal{
+    color:white;
+	background: #e3a600;
+}
+
+
+
+#todaySchedule{
+	position: relative;
+}
+
+input.time,input.todo{
+	color:#666;
+	height:50px;
+	padding:5px 20px;
+	border:0px solid #aaaaaf;
+	font-size:16px;
+	margin:0;
+	height:40px;
+	line-height: 40px;
+}
+
+
+#listBox .personal{
+	border-left:10px solid #e3a600;
+	position:relative;
+}
+
+#listBox .default{
+	border-left:10px solid #ddd;
+	position:relative;
+}
+
+
+#listBox .worktask{
+	border-left:10px solid #bd6052;
+	position:relative;
+}
+
+
+#listBox .meeting{
+	border-left:10px solid  #5d82ad;
+	position:relative;
+}
+
+.dustBox{
+    position:absolute;
+    height:20px;
+    top:18px;
+    right:15px;
+    padding:0;
+    width:40px;
+}
+
+.dustCheck{
+    position: absolute;
+    top:20px;
+    padding:0;
+    margin:0;
+    right:35px;
+}
+
